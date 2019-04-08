@@ -1,0 +1,17 @@
+Source: gitbrute
+Section: vcs
+Priority: optional
+Maintainer: Adam Borowski <kilobyte@angband.pl>
+Build-Depends: debhelper-compat (=12), gccgo-go
+Standards-Version: 4.3.0
+Homepage: https://github.com/bradfitz/gitbrute
+Vcs-Git: https://github.com/kilobyte/gitbrute -b debian
+Vcs-Browser: https://github.com/kilobyte/gitbrute/tree/debian
+Rules-Requires-Root: no
+
+Package: gitbrute
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: brute-force a git commit hash
+ gitbrute brute-forces a pair of author+committer timestamps such that the
+ resulting git commit has your desired prefix.

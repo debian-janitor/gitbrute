@@ -1,0 +1,5 @@
+gitbrute (0~12-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #926494)
+
+ -- Adam Borowski <kilobyte@angband.pl>  Mon, 08 Apr 2019 22:53:14 +0200
