@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+cd "$AUTOPKGTEST_TMP"
+git init
+echo meow >meow
+git add meow
+git commit -m Meow!
+gitbrute -prefix beef
+git log|head -n1|grep -q '^commit beef'
