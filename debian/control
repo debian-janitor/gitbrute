@@ -11,7 +11,7 @@ Rules-Requires-Root: no
 
 Package: gitbrute
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, git
 Description: brute-force a git commit hash
  gitbrute brute-forces a pair of author+committer timestamps such that the
  resulting git commit has your desired prefix.
