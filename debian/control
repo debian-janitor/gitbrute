@@ -11,6 +11,7 @@ Rules-Requires-Root: no
 
 Package: gitbrute
 Architecture: any
+Multi-Arch: foreign
 Depends: ${shlibs:Depends}, ${misc:Depends}, git
 Description: brute-force a git commit hash
  gitbrute brute-forces a pair of author+committer timestamps such that the
