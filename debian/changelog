@@ -1,3 +1,9 @@
+gitbrute (0~12-3) unstable; urgency=medium
+
+  * Don't let new Go write to real $HOME; fixes FTBFS.
+
+ -- Adam Borowski <kilobyte@angband.pl>  Sun, 01 Sep 2019 23:37:00 +0200
+
 gitbrute (0~12-2) unstable; urgency=medium
 
   * An autopkgtest.
