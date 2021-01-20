@@ -2,7 +2,7 @@
 set -e
 
 cd "$AUTOPKGTEST_TMP"
-git init
+git init -b dominus
 echo meow >meow
 export GIT_AUTHOR_NAME='Julius Caesar'
 export GIT_AUTHOR_EMAIL='imperator@spqr.it'
