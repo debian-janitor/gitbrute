@@ -1,3 +1,11 @@
+gitbrute (0~12-4) unstable; urgency=medium
+
+  * Fix autopkgtest fail by coping with "master" rename in git.
+    Closes: #980574
+  * dh 13.
+
+ -- Adam Borowski <kilobyte@angband.pl>  Wed, 20 Jan 2021 23:12:01 +0100
+
 gitbrute (0~12-3) unstable; urgency=medium
 
   * Don't let new Go write to real $HOME; fixes FTBFS.
