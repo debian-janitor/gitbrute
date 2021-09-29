@@ -79,7 +79,7 @@ func main() {
 	close(done)
 
 	cmd := exec.Command("git", "commit", "--allow-empty", "--amend", "--date="+w.author.String(), "--file=-")
-	cmd.Env = append([]string{"GIT_COMMITTER_DATE=" + w.committer.String()}, os.Environ()...)
+	cmd.Env = append(os.Environ(), "GIT_COMMITTER_DATE="+w.committer.String())
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = bytes.NewReader(msg)
 	if err := cmd.Run(); err != nil {
@@ -92,16 +92,16 @@ type solution struct {
 }
 
 var (
-	authorDateRx   = regexp.MustCompile(`(?m)^author.+> (.+)`)
-	commiterDateRx = regexp.MustCompile(`(?m)^committer.+> (.+)`)
+	authorDateRx    = regexp.MustCompile(`(?m)^author.+> (.+)`)
+	committerDateRx = regexp.MustCompile(`(?m)^committer.+> (.+)`)
 )
 
 func bruteForce(obj []byte, winner chan<- solution, possibilities <-chan try, done <-chan struct{}) {
-	// blob is the blob to mutate in-place repatedly while testing
+	// blob is the blob to mutate in-place repeatedly while testing
 	// whether we have a match.
 	blob := []byte(fmt.Sprintf("commit %d\x00%s", len(obj), obj))
 	authorDate, adatei := getDate(blob, authorDateRx)
-	commitDate, cdatei := getDate(blob, commiterDateRx)
+	commitDate, cdatei := getDate(blob, committerDateRx)
 
 	s1 := sha1.New()
 	wantHexPrefix := []byte(*prefix)
