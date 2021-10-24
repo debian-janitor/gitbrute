@@ -1,3 +1,12 @@
+gitbrute (0~14-1) unstable; urgency=medium
+
+  * New upstream unrelease.
+  * Work around a nodejsfication regression in go that caused a FTBFS
+    (closes: #997787).  Requiring pulling deps from random webpages
+    is a big Do Not Want!
+
+ -- Adam Borowski <kilobyte@angband.pl>  Sun, 24 Oct 2021 15:45:20 +0200
+
 gitbrute (0~12-4) unstable; urgency=medium
 
   * Fix autopkgtest fail by coping with "master" rename in git.
