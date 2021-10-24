@@ -1,1 +1,1 @@
-../../bin/gitbrute usr/lib/git-core/git-brute
+usr/bin/gitbrute usr/lib/git-core/git-brute
