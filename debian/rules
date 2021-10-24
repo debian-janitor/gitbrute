@@ -5,4 +5,4 @@ export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 	dh $@
 
 override_dh_auto_build:
-	HOME="$$(pwd)" go build -o gitbrute
+	HOME="$$(pwd)" GO111MODULE=auto go build -o gitbrute
