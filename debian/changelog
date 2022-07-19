@@ -1,3 +1,9 @@
+gitbrute (0~15-1) unstable; urgency=medium
+
+  * New upstream unrelease.
+
+ -- Adam Borowski <kilobyte@angband.pl>  Tue, 19 Jul 2022 18:08:41 +0200
+
 gitbrute (0~14-1) unstable; urgency=medium
 
   * New upstream unrelease.
